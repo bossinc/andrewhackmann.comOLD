@@ -1,48 +1,18 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Andrew Hackmann</title>
-		<link href="styles/layout.css" rel="stylesheet" type="text/css" media="screen" />
-		<link href="styles/style1.css" rel="stylesheet" type="text/css" media="screen"/>
-	</head>
-	<body>
-		<div class="shell_header">
-			<div class="header">
-				<a href=""><img alt="" width="121" height="24"src="images/logo.gif" /></a>
-				<ul>
-					<li><a href="Contact/">Contact</a></li>
-					<!--<li><a href="Services/">SERVICES</a></li>-->
-					<li><a href="About/">About</a></li>
-					<!--<li><a href="Portfolio/">PORTFOLIO</a></li>-->
-					<li><a href=""style="color: white">Projects</a></li>
-				</ul>
-			</div>
-		</div>
-		
-		<div class="bgdetail"><div class="shell_bgdetail"></div></div>
-		<div class="container">
-		<div class="banner" style="background-image:url('banner.jpg');"></div>
-				<br>
-				<div class="break"></div>
-				<br>
-				<div class="text_holder">
-					<div class="projectBanner"><a href="BakersDozen/"><img src='BakersDozen/panel.jpg' alt="alt text" title="Baker's Dozen"></a></div>
-					<div class="projectBanner"><a href="http://gamejolt.com/games/overtime-at-freddy-s/63870"><img src="OvertimeAtFreddys/panel.jpg" alt="alt text" title="Overtime at Freddy's"></a></div>
-					<div class="projectBanner"><a href="https://pascalsoftware.com:6443/Lime/Lime"><img src="Lime/panel.jpg" alt="alt text" title="Lime Game Engine"></a></div>
-					<div class="projectBanner"><a href="http://photocheck.binpress.com/"><img src="PhotoCheck/panel.jpg" alt="alt text" title="Photo Check"></a></div>
-					<div class="projectBanner"><a href="QuickAudit/"><img src="QuickAudit/panel.jpg" alt="alt text" title="Quick Audit"></a></div>
-					<!--<div class="projectBanner"><a href="Summoners/"><img src="Summoners/panel.jpg" alt="alt text" title="Summoners"></a></div>-->
-					<br><br><br><br>
-				</div>
-			<div class="push">
-			</div>	
-		</div>
-		<div class="shell_footer">
-			<div class="footer">
-				<p>Copyright © 2016. All Rights Reserved | Website Designed and Maintained by Andrew Hackmann</p>
-				
-			</div>
-		</div>
-	</body>
-</html>
+---
+layout: default
+---
+
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
+
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="button button-primary">Read More</a>
+    </article>
+  {% endfor %}
+</div>
